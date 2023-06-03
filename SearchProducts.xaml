@@ -1,0 +1,177 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Search_Prodeucts" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="in_ProductsDT" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1514,1488</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Search_Prodeucts_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="102">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Search_Prodeucts" sap:VirtualizedContainerService.HintSize="552,1423" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="browser" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The Search Products workflow has been initialized&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="510,1192" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_Browser]" ScopeGuid="b3b65bac-a239-40bb-885a-63cfe13f3300" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1046" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_ProductsDT]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,954" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,828" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Current Product: &quot;+CurrentRow.Item(0).ToString]" />
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Search Field" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="b3b65bac-a239-40bb-885a-63cfe13f3300" Text="[CurrentRow.Item(0).ToString]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.daraz.pk/?spm=a2a0e.cart.header.dhome.751e7d68dSW9JL" DesignTimeRectangle="568, 147, 688, 45" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT q'" FullSelectorArgument="&lt;webctrl id='q' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='q' tag='INPUT' type='search' class='search-box__input--O34g' aaname='' /&gt;" Guid="4f6afb9c-e110-4d44-94ca-a563869466e3" ImageBase64="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" InformativeScreenshot="5d865b9cbf62a5bfc35c3bb9b6d16ed3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fcart.daraz.pk%2Fcart%3Fspm%3Da2a0e.home.header.dcart.35e34937LRZjAX%26scm%3D1003.4.icms-zebra-5028767-2822057.OTHER_5358361720_2473569&amp;amp;refer_pv_id=751e7d68dSW9JL' title='Online Shopping in Pakistan: Fashion, Electronics &amp;amp; Books - Daraz.pk' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'SEARCH'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3b65bac-a239-40bb-885a-63cfe13f3300" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.daraz.pk/?spm=a2a0e.cart.header.dhome.751e7d68dSW9JL" DesignTimeRectangle="1211, 147, 45, 45" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'SEARCH'" FullSelectorArgument="&lt;webctrl parentid='topActionHeader' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='topActionHeader' tag='BUTTON' type='' class='search-box__button--1oH7' aaname='SEARCH' check:innerText='SEARCH' /&gt;" Guid="84c41066-5cae-41c4-9a05-f5fa72029f00" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJwSURBVGhD7ZrLaxRBEIfzv5ijeDI5COJFD17EuxdFT4povChiRIISPUTwIKiBxAciqwhKELwpyLqJED2KS8QIGh9ERrM7z56ZsqucihNthdlu7UzoH3wsTNUU8+30PA7TB2sga0PC930gjvTXh+EBiFu3C4W6SiBShFNfCQnHSdiG4yRsw3EStuE4CdtwnIRtOE7iV6LJ/SCeXIdsbhog6kL2oQ3i2V2IG8eV/bpwjElkb2aLkeqk7afK/XTgGJEQM3eKcQCidQuiawdpe3RlLyQPLxQVgNxb+G1fHTjaEtHFXcUouYIu7Vb2BKc2FR0AyaNxZU8vcLQlxOx9GoRnQ1Vn4ntnqA8TnN6i7KkKR1si9z0aFI7tUNbL5EufqTca36esV4WjJVFeSv7R9cqeMtn8C+pNps4q61XhaEkEJweLMXKJjGxW9pTJPr2m3vjGkLJeFY7+clp8S4OiqweUdSYY3SovnIh6w9Ftyp6qcPQv7McTNCjvLCrrTNpuUp9oNZT1XuBoS+C1gE9mTPb+JYTnd66o4+1VNG9SHRMMD6yo68DRl5BEl/dAtvCqGCll5p/TQ45fPzD5l3f0i9vDc9uVc6rCMSJBHNsAyYMxyD7OFaN/Bt+f8BZMUjJ45kyIcMxJlMAlhf84Pg/KDzY88OWlZ0CE808k/oZJEc5/l0BMiXCsSCAmRDjWJBAWqe2ZYHoVQDjWJXTgOAnbcJyEbThOwjYcJ2EbTl+32wVCblzt/FGi0+kAMdRfC5alyl8UeJ4HxKF1q5qvh3/wTbJ0YiOEzQbkeU7U7isbPOg0TSFJEvqtpQRHCAFxHEuRFL4DpZFp7qqv/KsAAAAASUVORK5CYII=" InformativeScreenshot="6810f8a0a40e086ee68f6093ed2c4c46.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fcart.daraz.pk%2Fcart%3Fspm%3Da2a0e.home.header.dcart.35e34937LRZjAX%26scm%3D1003.4.icms-zebra-5028767-2822057.OTHER_5358361720_2473569&amp;amp;refer_pv_id=751e7d68dSW9JL' title='Online Shopping in Pakistan: Fashion, Electronics &amp;amp; Books - Daraz.pk' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ScrapeData2Excel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="358,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ScrapeData2Excel.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_currentProductName">
+                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow.Item(0).ToString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="ui:UiElement" x:Key="in_Browser">
+                          <VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="in_Browser" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

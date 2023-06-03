@@ -1,0 +1,197 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="in_Username" Type="InArgument(x:String)" />
+    <x:Property Name="in_Password" Type="InArgument(ss:SecureString)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1514,2162</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="1034,2097" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="992,2007" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="number" />
+        <Variable x:TypeArguments="x:String" Name="password" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="930,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;The Login workflow has been initialized&quot;]" />
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="930,1744" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_Browser]" OpenMode="Never" ScopeGuid="6bc178e4-e4a0-430e-87f7-2b1240d4e927" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="896,1598" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NCheckState DisplayName="Check App State 'login'" sap:VirtualizedContainerService.HintSize="854,1506" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6bc178e4-e4a0-430e-87f7-2b1240d4e927" Timeout="5" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,1280" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Not Logged In Sequence Initiated&quot;]" />
+                    <uix:NClick ClickType="Single" DisplayName="Click 'login'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6bc178e4-e4a0-430e-87f7-2b1240d4e927" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.daraz.pk/" DesignTimeRectangle="1340, 161, 34, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'login'" FullSelectorArgument="&lt;webctrl parentid='anonLogin' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='anonLogin' tag='A' type='' class='grey' aaname='login' check:innerText='LOGIN' /&gt;" Guid="08030a7c-186a-489b-a4b7-50f1ce6d1fa7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAASCAYAAAA31qwVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIcSURBVEhL7ZU9i9tAEIb9V1SpOBAYAoG4sitxhcprLFKkiknjJiYQfI0wmCMQEzjkIsKNDQYFgg8OpTCoCA4EHxj2wCA4LLhiwdj/4c1o9RHJdhyfiqAixQuamd3ZZ0czUokxhiKqtFqtUESVOOcookqbzQZFVGm73SIW+2LAnPqJndHag9M3YHQM9AYuvPV+3B30RNz4aMFdpmK+C7Njgwmbwe70MEnHSf7UzJydAXMvJegDL7ETPbpoV2to9idwbh0MuxdQqm24j1GcuzCqCi66Q8wWDLORAa2sw7qP4ksLukTrRT7KJUmQXw7hxflJ3kDPnH0S2KxbgXY93/f1mXgOksrvHPBU3B+9gnzphvYeWAU1ukhj/LtCOcDmMM9VmHdpH2nahhTd2nkvoXXDs/G09sComt/IV27AfgjX5ACLEu30hDisbhGYB6suoT2N/GsO/8EP5Uewh8AoH/tMlX47EZXOBWacHQC7M6EKMB/26xTYwg4H4I0GScTJ9wew7ZrRpWRR7RxgwcG0+Tb7qvxxI+mr2YcK1J0eFK/6b2CBfU+xF21Yn3I0P79pQa73MI+n0HfElF79iOzlkPqFDltEdrDna/M0MNL8mqpLk3oULFiQVryYjZpQzxTUzmtQyhpa43AiY/HvPejPn1FchUoTp2gtWD+P91iyf00Dph0BO0WcH/YnCn4pux/fHHoy2L/Sf7CnqqBgW/wC6PM1uGzK5l4AAAAASUVORK5CYII=" InformativeScreenshot="f8e1838fee36df3804997e8517dbda4f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping in Pakistan: Fashion, Electronics &amp;amp; Books - Daraz.pk' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Phone Number or Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="6bc178e4-e4a0-430e-87f7-2b1240d4e927" Text="[in_Username]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://member.daraz.pk/user/login?spm=a2a0e.home.header.d5.35e34937Q04lxm&amp;redirect=https%3A%2F%2Fwww.daraz.pk%2F" DesignTimeRectangle="580, 447, 380, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="0ac7c40c-4c62-47fa-bc6a-a0f64bad007a" ImageBase64="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" InformativeScreenshot="7dfbb4559d60de332eb25ce4cb97bcd3.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fwww.daraz.pk%2F&amp;amp;refer_pv_id=35e34937Q04lxm' title='Daraz.pk: Online Shopping Pakistan - Mobiles, Tablets, Home Appliances, TV, Audio &amp;amp;amp; More' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="580, 427, 380, 15" ElementType="Text" FriendlyName="'Phone Number or Email'" FullSelectorArgument="&lt;webctrl parentid='container' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='container' tag='LABEL' type='' class='' aaname='Phone Number or Email' check:innerText='Phone Number or Email' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="6bc178e4-e4a0-430e-87f7-2b1240d4e927" SecureText="[in_Password]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://member.daraz.pk/user/login?spm=a2a0e.home.header.d5.35e34937Q04lxm&amp;redirect=https%3A%2F%2Fwww.daraz.pk%2F" DesignTimeRectangle="580, 535, 380, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="4b64edaf-1b15-4deb-9c92-a1ffa694558d" ImageBase64="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" InformativeScreenshot="5be7830b4b524cd6deafd061b871cfca.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fwww.daraz.pk%2F&amp;amp;refer_pv_id=35e34937Q04lxm' title='Daraz.pk: Online Shopping Pakistan - Mobiles, Tablets, Home Appliances, TV, Audio &amp;amp;amp; More' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="580, 515, 380, 15" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' parentid='container' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' parentid='container' tag='LABEL' type='' class='' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYAAAAATCAYAAACZQtrmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPpSURBVHhe7drRZyNbHAfw+7flaViGMJRhCSVP0YdGyLxsXm6UxqWjbCw3ysrDmiVmX1JqwuqlUtb04RrKEMIyLEMZQgjf+zszJ9Ok9za6rvvQm++HaWbmnJ5JXs73d07yC4iIaC8xAIiI9hQDgIhoTzEAiIj2VBkA2Z0H99zVxwD+JEKy1I2vyTcXlbNQX4hZAO8u0xdERLRWBkAyaqDSGmJ6M82P8UUT1psmxonu8FqsA2Al5+qQ68ZIfwh1TUREue0A2KycRfTehP1xXlyslkiiIhyiJ6Gw/B4VwSENy81JdpkgygNlvZooxojTvFWkiG9i+aulMaaPjXIZFs/7vrEU0X2ymbSt+670c+7myG51AMQealYNznEN5pGDpmWh+wdXAkREazsDYP7RhvkhyidY/8hE/f0Y04mHzoEF966YlNNJB2a9B38SwHtnwZIx8mk2DdCp1tEbBQg+dWAduAilQT2nDJW5TNKVBnwdKOp5RbWeITyTsY4HGE989OrGYxWvKvwD6dfuwb2ScRYh3AMD9d98jEc9NKrGxueQ990wYNQHiF/jdhYR0X9oOwBOAmQPmRyJVOYDNAwLfZn/sUgQquq66LoVFuFZBZ2JblnFGJ8HyKd3NVG/k/HyBinIL10EMzmZDWE3fJmai3EaR3Lkk3sqIVODp/456sM8HGK+Xk1k1+gaDoIHOX8ybnblwDi5lrWFdtsr35savy5hk3yR0FFBRkREpe0AqDmPXwT/7iPURbeS3g7RPbZhv5Vjo8pezjw4VVOq9S4GoxDJetJezOG1TZhWE92tsSL0q11cS6j4DXlNAjitMdKFTPJvZdKXHpsBU1B9K3C/yel6j18LzzdWB8pm+0OKLH8/KdIf+R0iItJ2bgGV1FbNYR+hqsDFP/VdJjGm+VbPALG+l5OJPr4pto0G98Wt6IMF99JH81dVuWcI2lLdT1xYukpXVX3ldJqfFxJ4dbNYjTwJALVtVP/8TAAQEdGzXhYAdy6Mlo80r6YzTE9N3Veq/EO7nNixmqJXUdW9tHyqwb54jILpaQXdr3qjRiZpS1YNzlWxkZNeNmFWJRRUhZ/fkFXBGxlnvc8zG6JW7SNSz386wf/Zh9nwypVH8nnH5yAiotLLAkB9CdwyYFRt2FYNvZMmKnn1LnFw78GxrGJrSF6dL7oaz2J4bQuWLfdteW37G9tD1+hW9J6+ko7R1MGxln7toabHtSwH3r1Og79V+Bmii7oEiHqODafFACAieokyAF5kueOnNItn2lbL7Z+G/qRdj9zyL59DRLRvfi4AiIjof4MBQES0pxgARER7igFARLSnGABERHsJ+At5/m6tw2B51gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'LOGIN'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6bc178e4-e4a0-430e-87f7-2b1240d4e927" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://member.daraz.pk/user/login?spm=a2a0e.home.header.d5.35e34937Q04lxm&amp;redirect=https%3A%2F%2Fwww.daraz.pk%2F" DesignTimeRectangle="1010, 439, 305, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'LOGIN'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='next-btn next-btn-primary next-btn-large' aaname='LOGIN' check:innerText='LOGIN' /&gt;" Guid="ead0865b-b376-44f0-a8d8-bc430f28e790" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATUAAAA0CAYAAADrNK8VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANZSURBVHhe7drBSht9FIbxXozX4DpX4B248wbsLgu3cacrxUVdFBFKcSG6shtxUUURKaVBSqQUdCculDSdZJI5PTOTM8mMM1NBCs3heeEHXyb/xk14yHzJG2GMMUcjaowxV8uiFl7sSW9lXn69nQOAmRF3K+6XLYsaQQMwq+J+2bKolR0EgFlhI2oAXLARNQAu2IgaABdsRA2ACzaiBsAFG1ED4IKNqAFwwUbUALhgI2oAXLARNQAu2IgaABdsRA2ACzaiBsAFG1ED4IKNqAFwwUbUUGFVhj2RqLNa8lysIf3PbYlG4zdQvG5bwp1G4dySDDq3ItPnHk5lsD05M+g8ivT0WvI4/bvydCz97DXKzgF5NqKGCvVRC85u9F0TSPR1VYLWnPQ29fx9IBK2ZaCP03ONNEThrQwPF6Wn17Jz3UmcSqOmi741x69Tdg7IsxE1VKiLWlOGT/qm+bmRhCq73tqQkfYquh7HaOtAIj0WXS1OzsQ+HOv1QEaf0selUQv1hURjWPmJDsizETVUqInabj5K0wZ3+ma6P0hjd9LWBxqmrefnppVFLerspOF8OJKg9ByQZyNqqFATtf1TjdqjDPcL11UuPOfxLeqNhIUzReVR07+bfKLT/75cKjkH5NmIGir8g6gljycbnZf8m8LfHXzX50a3EuptKFFDHRtRQ4WaqCW3nxq1w8J1ldx+2i1j8fZzfUn6u8vqKPkE9pKoJY+7elhvaYka6tiIGirURG38nPxYK1xfy39R0PqY/JIj+pLePk6k118WNZV8Mgwk6uqLEzVUsBE1VKiLmv2k41FGZ035HV9bb0p4p3EK9XZz6ouB5PYxPneyPP6mtCHBp6v0k9rZ+MzfomY/DYlH1FDBRtRQYfxp7Nns/6U1pH95U/jxrQZtr/jj2wUZXBd+fKsf56LOu4pvNSti2tLr8W0oUUMFG1HDK+knr/fLEmwWY1aUnutvL5Q8B7yejagBcMFG1AC4YCNqAFywETUALtiIGgAXbEQNgAs2ogbABRtRA+CCjagBcMFG1AC4YCNqAFywETUALtiIGgAXbEQNgAs2ogbABRtRA+CCjagBcMGWRa23Ml96EAD+d3G/bFnUwos9wgZg5sTdivtly6LGGGMeRtQYY44m8gc2a281/g0YcQAAAABJRU5ErkJggg==" InformativeScreenshot="2938d97e17ee375361278130df9c2233.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fwww.daraz.pk%2F&amp;amp;refer_pv_id=35e34937Q04lxm' title='Daraz.pk: Online Shopping Pakistan - Mobiles, Tablets, Home Appliances, TV, Audio &amp;amp;amp; More' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1010, 498, 68, 14" ElementType="Text" FriendlyName="'Or, login with'" FullSelectorArgument="&lt;webctrl aaname='Or, login with' parentid='container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Or, login with' parentid='container' tag='SPAN' type='' class='' check:innerText='Or, login with' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAASCAYAAAD4+JjWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOQSURBVFhH7ZbxS9tAFMf3TwfJL6EEaYT8YIcdqFAkDCrSYsHKcBjGKlYMw/SHIgEzWIqFErAiYRQklO/eXS7pNdZq1TEH/f7Q5vIu99597r2XfMBSc7UE9ISWgJ7QEtATmgY0juCfNFDdraJ66KAfifvPVHhswjwOxegFuvdh7zsIx2L8RgovGrC9kRjJCmGbJuw5IU8AjWnyugpjtwW348I53IKulmAPhP0Zej2gAG06mLcGFHWbGaDhKe1r3+PXCwGKTkpQKg5kzvzejouYDe4CuL0homuP/menVh5QTM94BNu9ChHnNs3XIZt/E2P400Vwx+8i6AT0S+L+IsQ3Pp/nXc/wGfXR9WhtMYwHHrxBNkLoeQjvJ/ejnouWpUPZaMDlzwlAgwj9S4qz42OYPi4kAMVwKgoqP3LW0Ia5UgXn3bWgFHSYGxaqZ31uzksGNKL5WqGExokD2zKgrttZZoTfCDy3tdDY0KGuKLC6zNKFpVj0yy5Tfw20qOxLBYrvIhffmOavVOAQBLYHd0eB8pk/TdnooLJCa5HPNK7+WRWVdQ1KsYzqF48OggHSoK2asI5bPE6l2IS8OwGITUyDlJULeHM6w/KaAPJR0ww0e8l9wsUPoHzKsoDZdDR+JRbm+2jtEUCSP7a2spuWRqrkYPmzDNZaiUAmUHBZhSqyXz44vk4Kke9bjoX5p7ZyI4YkAWhI/WcGIHYKcsDZwrOVBcIyL31OKAvsxkZpyiYfTg6Q5G96YxNFp2XoBwGfb9C/XzdQI47BgZ5VxHxAcg9i/qd7UtaD/LoG4zBXOlc1aGnKLQIoaqNMG3WlvhN+NaDVfTppl0OY2F4HiPsyj9DaM5OMpZiNepsOvIy2aFtvAgi9JgyN6vlWjOM+juitlpQFSQ44HiH6nesHpEkgEdqfVDpBUSDjAM2ixk+W2VofWb8TthEB014BiG+S+kixRsVLGnuokS/NpJ7H7XJc+XUWAUSKLhswVQWqTo1TVWHS6zDrOXLA7FoKIJUcCG4dWKusAerQCxrKh8FkrQGVGa3PbUXqG6uvAZSUE89OIW9PS8pOaCouKn/mW99uU2NZEFCq+P5hdsganW9B28s3zEdEaz1YTZRX4oeyi94iclB/XWOKSSr/eZoJaL5i9L/b6GbpsKhi6nc6DMuG03HQ3KZs3Wwn3z7vUC8A9BZiH20enHNn5kfke9I/AvT/aAloroA/nvshgN/0Y2YAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Login Successful&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,193" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;User Already Logged In&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.daraz.pk/" DesignTimeRectangle="1340, 161, 34, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'login'" FullSelectorArgument="&lt;webctrl parentid='anonLogin' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='anonLogin' tag='A' type='' class='grey' aaname='login' check:innerText='LOGIN' /&gt;" Guid="b741ac98-a7b8-4fb9-82c9-822bc5f5b6f6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAASCAYAAAA31qwVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIcSURBVEhL7ZU9i9tAEIb9V1SpOBAYAoG4sitxhcprLFKkiknjJiYQfI0wmCMQEzjkIsKNDQYFgg8OpTCoCA4EHxj2wCA4LLhiwdj/4c1o9RHJdhyfiqAixQuamd3ZZ0czUokxhiKqtFqtUESVOOcookqbzQZFVGm73SIW+2LAnPqJndHag9M3YHQM9AYuvPV+3B30RNz4aMFdpmK+C7Njgwmbwe70MEnHSf7UzJydAXMvJegDL7ETPbpoV2to9idwbh0MuxdQqm24j1GcuzCqCi66Q8wWDLORAa2sw7qP4ksLukTrRT7KJUmQXw7hxflJ3kDPnH0S2KxbgXY93/f1mXgOksrvHPBU3B+9gnzphvYeWAU1ukhj/LtCOcDmMM9VmHdpH2nahhTd2nkvoXXDs/G09sComt/IV27AfgjX5ACLEu30hDisbhGYB6suoT2N/GsO/8EP5Uewh8AoH/tMlX47EZXOBWacHQC7M6EKMB/26xTYwg4H4I0GScTJ9wew7ZrRpWRR7RxgwcG0+Tb7qvxxI+mr2YcK1J0eFK/6b2CBfU+xF21Yn3I0P79pQa73MI+n0HfElF79iOzlkPqFDltEdrDna/M0MNL8mqpLk3oULFiQVryYjZpQzxTUzmtQyhpa43AiY/HvPejPn1FchUoTp2gtWD+P91iyf00Dph0BO0WcH/YnCn4pux/fHHoy2L/Sf7CnqqBgW/wC6PM1uGzK5l4AAAAASUVORK5CYII=" InformativeScreenshot="d3714dc40549f55cc3c793bccedaa6a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Shopping in Pakistan: Fashion, Electronics &amp;amp; Books - Daraz.pk' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
